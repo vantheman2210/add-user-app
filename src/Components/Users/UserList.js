@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AddUser.module.css";
+import Card from "../UI/Card";
 
 const UserList = (props) => {
+  console.log(props)
+
+  if (props.userList.length === 0) return;
   return (
-    <div className={styles.users}>
-      <ul>
-        {props.users.map((user) => {
-          return <li id={user.username}>{user}</li>;
+    <Card>
+      <ul className={styles.users}>
+        {props.userList.map((user, i) => {
+          return (
+            <li key={i}>
+              {user.username} ({user.age} years old)
+            </li>
+          );
         })}
       </ul>
-    </div>
+    </Card>
   );
 };
 

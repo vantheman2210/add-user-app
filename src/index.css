@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 html {
@@ -7,5 +8,6 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0; 
+  background: rgb(121, 121, 121);
 }
