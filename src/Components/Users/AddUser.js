@@ -7,16 +7,33 @@ const AddUser = () => {
     age: "",
   });
 
+  const onChangeHandler = function (e) {
+    console.log(e.target.name);
+    setUser((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    console.log(user);
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmitHandler}>
       <label>
         Name:
-        <input></input>
+        <input name="name" onChange={onChangeHandler}></input>
       </label>
       <label>
         Age:
-        <input></input>
+        <input name="age" onChange={onChangeHandler}></input>
       </label>
+      <button type="submit">Create User</button>
     </form>
   );
 };
