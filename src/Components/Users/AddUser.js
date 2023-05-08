@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "../UI/Card";
 import styles from "./AddUser.module.css";
 
 const AddUser = () => {
@@ -19,22 +20,34 @@ const AddUser = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-
+    e.target.reset();
     console.log(user);
   };
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <label>
-        Name:
-        <input name="name" onChange={onChangeHandler}></input>
+    <Card>
+    <form onSubmit={onSubmitHandler} className="form-control">
+      <label htmlFor="username">
+        Username:
+        <input
+          type="text"
+          id="username"
+          name="username"
+          onChange={onChangeHandler}
+        ></input>
       </label>
-      <label>
+      <label htmlFor="age">
         Age:
-        <input name="age" onChange={onChangeHandler}></input>
+        <input
+          type="text"
+          id="age"
+          name="age"
+          onChange={onChangeHandler}
+        ></input>
       </label>
-      <button type="submit">Create User</button>
+      <button type="submit">Add user</button>
     </form>
+    </Card>
   );
 };
 
