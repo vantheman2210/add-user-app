@@ -24,7 +24,7 @@ const AddUser = () => {
     if (user.username.trim() === 0 || user.age.trim().length === 0) {
       return;
     }
-    if (user.age < 0) return;
+    if (+user.age < 0) return;
 
     setUser({
       username: "",
@@ -49,7 +49,7 @@ const AddUser = () => {
         <label htmlFor="age">
           Age:
           <input
-            type="text"
+            type="number"
             id="age"
             name="age"
             value={user.age}
