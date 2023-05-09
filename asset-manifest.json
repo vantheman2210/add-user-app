@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/add-user-app/static/css/main.d16c4c0a.css",
+    "main.js": "/add-user-app/static/js/main.fb636aaf.js",
+    "index.html": "/add-user-app/index.html",
+    "main.d16c4c0a.css.map": "/add-user-app/static/css/main.d16c4c0a.css.map",
+    "main.fb636aaf.js.map": "/add-user-app/static/js/main.fb636aaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d16c4c0a.css",
+    "static/js/main.fb636aaf.js"
+  ]
+}
